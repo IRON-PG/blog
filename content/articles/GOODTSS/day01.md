@@ -1,13 +1,12 @@
 ---
-title: "You don't Know JS Day-01 \n@ChanYangYu"
-description: "This description will be used for the article listing and search results on Google."
+title: "You don't Know JS Study-01"
+description: "Part1, Part2 정리"
 date: "2022-10-22"
 banner:
   src: "../../images/you-dont-know.png"
   alt: "You don't know JS"
 categories:
-  - "Part.1"
-  - "Part.2"
+  - "GOODTSS"
 ---
 # Part 1 : 타입
 ### 자바스크립트 타입
@@ -24,22 +23,22 @@ categories:
     ```
 
 - function : object 타입의 하위 타입으로 호출가능한 객체이다.
-  - function 객체의 length는 인자값의 개수를 의미한다.
+    - function 객체의 length는 인자값의 개수를 의미한다.
 
-    ```jsx
-    function a(b, c) { ... }
-    a.length // 2
-    ```
+      ```jsx
+      function a(b, c) { ... }
+      a.length // 2
+      ```
 
 - typeof
-  - 선언되지 않은 변수에 대한 비교에서도 ReferenceError를 일으키지 않고 undefined를 리턴한다. (안전가드)
+    - 선언되지 않은 변수에 대한 비교에서도 ReferenceError를 일으키지 않고 undefined를 리턴한다. (안전가드)
 
-    ```jsx
-    const a = undefined;
-    typeof a // "undefined"
-    typeof b // "undefined"
-    ```
-    
+      ```jsx
+      const a = undefined;
+      typeof a // "undefined"
+      typeof b // "undefined"
+      ```
+
 
 # Part 2 : 값
 
@@ -90,13 +89,13 @@ categories:
 ### undefined vs null
 
 - undefined 타입
-  - 값은 undefined 만 있음
-  - 값이 할당되지 않은 상태
-  - typeof undefined  ⇒ “undefined”
+    - 값은 undefined 만 있음
+    - 값이 할당되지 않은 상태
+    - typeof undefined  ⇒ “undefined”
 - null 타입
-  - 값은 null만 있음
-  - 값이 있었지만 현재는 없는 상태
-  - typeof null ⇒ “object”
+    - 값은 null만 있음
+    - 값이 있었지만 현재는 없는 상태
+    - typeof null ⇒ “object”
 
 ### NaN
 
