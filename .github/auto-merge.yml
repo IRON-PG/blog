@@ -1,0 +1,15 @@
+minApprovals:
+  MEMBER: 2
+requiredBaseBranches:
+- main
+- GOODTSS
+- ORANGE
+- YUUIL
+mergeMethod:
+- squash
+mergeCommitMessage: |
+  {title} (#{number})
+  {commits}
+blockingLabels:
+- do not merge
+deleteBranchAfterMerge: true
