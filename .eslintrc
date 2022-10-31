@@ -1,0 +1,5 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["prettier", "plugin:react/jsx-runtime"],
+  "parser": "babel-eslint"
+}

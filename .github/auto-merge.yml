@@ -1,0 +1,13 @@
+minApprovals:
+  MEMBER: 2
+deleteBranchAfterMerge: true
+mergeCommitMessage: |
+  {title} (#{number})
+  {commits}
+rules:
+- requiredBaseBranches:
+  - main
+- mergeMethod:
+  - squash
+- blockingLabels:
+  - "do not merge"
