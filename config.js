@@ -1,6 +1,6 @@
 const config = {
   gatsby: {
-    pathPrefix: '/',
+    pathPrefix: '/blog',
     siteUrl: 'https://iron-pg.github.io',
     gaTrackingId: null,
     trailingSlash: false,
