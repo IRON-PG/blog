@@ -43,7 +43,7 @@ const SidebarLayout = ({ location }) => (
                       title ? title.replace(/\s+/g, "").toLowerCase() : "#";
                     const itemId = convertTitleToUrl(innerItem.title);
 
-                    const secondLevelItems = innerItem.items?.[0].items;
+                    const secondLevelItems = innerItem.items;
 
                     return (
                       <React.Fragment key={index}>
@@ -51,15 +51,20 @@ const SidebarLayout = ({ location }) => (
                           {innerItem.title}
                         </ListItem>
                         {secondLevelItems &&
-                          secondLevelItems.map((item, secondIndex) => (
-                            <ListItem
-                              key={`${index}_${secondIndex}`}
-                              to={`#${convertTitleToUrl(item.title)}`}
-                              level={2}
-                            >
-                              {item.title}
-                            </ListItem>
-                          ))}
+                          secondLevelItems.map((item, secondIndex) => {
+                            if (!item.title) {
+                              return null;
+                            }
+                            return (
+                              <ListItem
+                                key={`${index}_${secondIndex}`}
+                                to={`#${convertTitleToUrl(item.title)}`}
+                                level={2}
+                              >
+                                {item.title}
+                              </ListItem>
+                            );
+                          })}
                       </React.Fragment>
                     );
                   }

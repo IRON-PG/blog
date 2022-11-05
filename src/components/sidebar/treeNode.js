@@ -7,6 +7,8 @@ import Link from '../link';
 const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, ...rest }) => {
   const isCollapsed = collapsed[url];
 
+  items.sort((a, b) => a?.title?.localeCompare(b?.title) ?? -1);
+
   const collapse = () => {
     setCollapsed(url);
   };
