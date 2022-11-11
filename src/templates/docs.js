@@ -17,6 +17,7 @@ const forcedNavOrder = config.sidebar.forcedNavOrder;
 export default class MDXRuntimeTest extends Component {
   render() {
     const { data } = this.props;
+    console.log(data)
 
     if (!data) {
       return this.props.children;
