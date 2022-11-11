@@ -17,8 +17,8 @@ const Wrapper = styled("div")`
     color: ${({ theme }) => theme.colors.text};
   }
 
-  .sideBarUL .item > a:hover {
-    background-color: #7366FF;
+  .sideBarUL .item:not(.active) > a:hover {
+    background-color: rgba(115, 102, 255, .5);
     color: #fff !important;
 
     /* background: #F8F8F8 */
@@ -60,7 +60,7 @@ const LeftSideBarWidth = styled("div")`
 `;
 
 const RightSideBarWidth = styled("div")`
-  width: 224px;
+  width: 298px;
 `;
 
 const Layout = ({ children, location }) => (

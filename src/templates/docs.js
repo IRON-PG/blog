@@ -118,6 +118,17 @@ export default class MDXRuntimeTest extends Component {
             </Edit>
           </div>
           <p className="date">{mdx.frontmatter.date}</p>
+          <div className="descriptionWrapper">
+            {mdx.frontmatter.author && (
+              <div className="authorWrapper">
+                <img
+                  className="authorImg"
+                  src={`https://github.com/${mdx.frontmatter.author}.png`}
+                />
+                <p>{mdx.frontmatter.author}</p>
+              </div>
+            )}
+          </div>
         </div>
         <StyledMainWrapper>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -154,6 +165,7 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        author
         date
       }
     }
